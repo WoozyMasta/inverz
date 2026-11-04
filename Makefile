@@ -82,7 +82,7 @@ release: clean winres
 .PHONY: check ci
 
 check: verify tidy fmt vet vulncheck lint-fix align-fix generate-docs markdown-lint test test-race fuzz
-ci: download generate-check tools-ci verify tidy-check fmt-check vet vulncheck lint align test test-race fuzz
+ci: download generate-check tools-ci verify tidy-check fmt-check vet vulncheck lint align test
 
 .PHONY: test test-race
 

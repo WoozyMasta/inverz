@@ -22,7 +22,7 @@ jobs:
       - uses: rvben/rumdl@v0
 
       - name: Run CI checks
-        run: make ci test-race
+        run: make ci test-race fuzz FUZZ_TIME=5s
 
       - name: Install additional build tools
         run: make tool-winres
