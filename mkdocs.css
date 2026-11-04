@@ -1,0 +1,69 @@
+:root {
+  --inverz-ink: #1c1212;
+  --inverz-red: #e73b2c;
+  --inverz-gray: #c6c6c6;
+  --inverz-header: #d8d0d0;
+
+  --md-primary-fg-color: var(--inverz-ink);
+  --md-primary-fg-color--light: #3a2525;
+  --md-primary-fg-color--dark: #140c0c;
+  --md-accent-fg-color: var(--inverz-red);
+  --md-accent-fg-color--transparent: rgb(231 59 44 / 12%);
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f7f4f4;
+  --md-default-bg-color--light: rgb(247 244 244 / 70%);
+  --md-default-bg-color--lighter: rgb(247 244 244 / 35%);
+  --md-default-bg-color--lightest: rgb(247 244 244 / 12%);
+  --md-default-fg-color: var(--inverz-ink);
+  --md-default-fg-color--light: rgb(28 18 18 / 70%);
+  --md-default-fg-color--lighter: rgb(28 18 18 / 45%);
+  --md-default-fg-color--lightest: rgb(28 18 18 / 12%);
+  --md-code-bg-color: #ece6e6;
+  --md-typeset-a-color: #b52d22;
+  --md-footer-fg-color: var(--inverz-header);
+  --md-footer-fg-color--light: rgb(216 208 208 / 70%);
+  --md-footer-fg-color--lighter: rgb(216 208 208 / 45%);
+  --md-footer-bg-color: var(--inverz-ink);
+  --md-footer-bg-color--dark: #140c0c;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #100808;
+  --md-default-bg-color--light: #241818;
+  --md-default-bg-color--lighter: #2b1d1d;
+  --md-default-bg-color--lightest: #332323;
+  --md-default-fg-color: var(--inverz-gray);
+  --md-default-fg-color--light: rgb(216 208 208 / 70%);
+  --md-default-fg-color--lighter: rgb(216 208 208 / 45%);
+  --md-default-fg-color--lightest: rgb(216 208 208 / 12%);
+  --md-code-bg-color: #140c0c;
+  --md-accent-fg-color: #ff6b5e;
+  --md-accent-fg-color--transparent: rgb(255 107 94 / 12%);
+  --md-typeset-a-color: #ff796d;
+  --md-footer-fg-color: var(--inverz-header);
+  --md-footer-fg-color--light: rgb(216 208 208 / 70%);
+  --md-footer-fg-color--lighter: rgb(216 208 208 / 45%);
+  --md-footer-bg-color: #140c0c;
+  --md-footer-bg-color--dark: #100808;
+}
+
+.md-header__button.md-logo {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: auto;
+  height: 2rem;
+}
+
+.md-typeset a:hover {
+  color: var(--inverz-red);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--inverz-header);
+}

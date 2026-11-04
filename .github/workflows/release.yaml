@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version: stable
+
+      - uses: rvben/rumdl@v0
+
+      - name: Run CI checks
+        run: make ci test-race
+
+      - name: Install additional build tools
+        run: make tool-winres
+
+      - name: Build release artifacts
+        run: make release
+
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-artifacts
+          path: build/*
+          if-no-files-found: error
+
+      - name: Build release notes
+        env:
+          VERSION: ${{ github.ref_name }}
+        run: make release-notes > release.md
+
+      - name: Create GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          bodyFile: release.md
+          artifacts: ./build/*
