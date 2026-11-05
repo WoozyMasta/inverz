@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning][].
 ### Removed
 -->
 
+## [0.1.1][] - 2026-11-05
+
+### Fixed
+
+* Update docs
+
+[0.1.1]: https://github.com/WoozyMasta/inverz/compare/v0.1.0...v0.1.1
+
 ## [0.1.0][] - 2026-11-05
 
 ### Added
